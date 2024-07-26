@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TeamPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-green-50">
@@ -8,9 +10,12 @@ export default function TeamPage() {
           team members.
         </p>
         <div className="mt-6">
-          <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+          <Link
+            href="/dashboard/team"
+            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+          >
             Meet the Team
-          </button>
+          </Link>
         </div>
       </div>
     </div>
