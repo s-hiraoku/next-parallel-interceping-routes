@@ -44,29 +44,32 @@ const teams = [
 export default function TeamPage() {
   return (
     <div className="h-full bg-gray-100 p-6 overflow-auto">
-      <div className="h-full container mx-auto space-y-6 ">
+      <div className="h-full container mx-auto space-y-6 flex flex-col">
         <h1 className="text-3xl font-bold mb-4">Team Members</h1>
-        {teams.map((team) => (
-          <div key={team.name} className="bg-white shadow rounded-lg p-4 mb-6">
-            <h2 className="text-2xl font-bold mb-2">{team.name}</h2>
-            <table className="min-w-full bg-white">
-              <thead>
-                <tr>
-                  <th className="py-2">Name</th>
-                  <th className="py-2">Role</th>
-                </tr>
-              </thead>
-              <tbody>
-                {team.members.map((member) => (
-                  <tr key={member.name}>
-                    <td className="border px-4 py-2">{member.name}</td>
-                    <td className="border px-4 py-2">{member.role}</td>
+        {teams.map((team) => {
+          const { name, members } = team;
+          return (
+            <div key={name} className="bg-white shadow rounded-lg p-4 mb-6">
+              <h2 className="text-2xl font-bold mb-2">{name}</h2>
+              <table className="min-w-full bg-white">
+                <thead>
+                  <tr>
+                    <th className="py-2">Name</th>
+                    <th className="py-2">Role</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ))}
+                </thead>
+                <tbody>
+                  {members.map((member) => (
+                    <tr key={member.name}>
+                      <td className="border px-4 py-2">{member.name}</td>
+                      <td className="border px-4 py-2">{member.role}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

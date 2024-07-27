@@ -26,7 +26,7 @@ export default function RootLayout({
               </h1>
             </div>
           </header>
-          <main className="flex-1 container mx-auto px-4 py-6">
+          <main className="flex-1 container mx-auto px-4 py-6 overflow-auto">
             <div className="bg-white p-6 rounded-lg shadow-lg h-full overflow-auto">
               {children}
             </div>

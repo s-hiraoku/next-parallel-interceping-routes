@@ -1,3 +1,5 @@
+import { isRenderableReactNode } from "@/utils";
+
 export default function DashboardLayout({
   children,
   analytics,
@@ -12,7 +14,7 @@ export default function DashboardLayout({
 
   return (
     <div className="h-full flex flex-col bg-gray-100 p-4">
-      <div className="mb-4 bg-white shadow-md p-4 rounded-md ">{children}</div>
+      <div className="mb-4 bg-white shadow-md p-4 rounded-md">{children}</div>
       <div className="flex gap-4 h-full min-h-0">
         {hasAnalytics && (
           <div

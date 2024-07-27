@@ -117,7 +117,7 @@ const teamOptions = {
 export default function AnalyticsPage() {
   return (
     <div className="h-full w-full bg-gray-100 p-6 overflow-auto">
-      <div className="container mx-auto space-y-6 h-hull">
+      <div className="container space-y-6">
         <h1 className="text-3xl font-bold mb-4">Total Sales</h1>
         <div className="bg-white shadow rounded-lg p-4">
           <div className="h-64">

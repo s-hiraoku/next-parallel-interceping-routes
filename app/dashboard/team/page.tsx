@@ -1,3 +1,3 @@
 export default function TeamPage() {
-  return null;
+  return <h2 className="text-2xl font-bold text-gray-600">Team Section</h2>;
 }
