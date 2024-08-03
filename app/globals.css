@@ -31,3 +31,18 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border-color: #f3f4f6; /* グレー色 */
+  border-top-color: #3b82f6; /* 青色 */
+  animation: spin 1s linear infinite;
+}
